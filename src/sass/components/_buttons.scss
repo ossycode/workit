@@ -1,0 +1,37 @@
+@use "../abstracts/mixins" as *;
+
+.btn {
+  display: inline-block;
+  &,
+  &:link,
+  &:visited {
+    // max-width: 16.1rem;
+    // height: max-content;
+    // height: 6.1rem;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__primary {
+    background-color: var(--color-green);
+    border: 2px solid transparent;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-green);
+      border: 2px solid var(--color-green);
+    }
+  }
+
+  &__secondary {
+    color: var(--color-white);
+    background: transparent;
+    @include text-docoration;
+
+    &:hover {
+      color: var(--color-green);
+    }
+  }
+}

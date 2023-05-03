@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+  background-color: var(--color-primary);
+  margin-bottom: -0.5rem;
+
+  &__logo-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 14rem;
+
+    @include respond(tab-land) {
+      padding: 3rem 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem;
+      justify-content: space-between;
+
+      &:last-child {
+        margin-right: -1rem;
+      }
+    }
+  }
+}

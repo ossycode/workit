@@ -1,0 +1,91 @@
+@use "../abstracts/mixins" as *;
+
+.main {
+  &__box {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding-block: 3.5rem 31rem;
+    margin-inline: auto;
+
+    @include respond(tab-port) {
+      padding-block: 3.5rem 28rem;
+    }
+    @include respond(phone) {
+      padding-block: 3rem 20rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-primary);
+      clip-path: ellipse(120% 100% at 50% 0);
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    @include respond(desk-tab) {
+      &::before {
+        content: url(/dist/assets/images/bg-pattern-1.svg);
+        position: absolute;
+        top: 0px;
+        right: 85%;
+        display: block;
+
+        @include respond(tab-port) {
+          top: -6rem;
+        }
+      }
+    }
+
+    @include respond(desk-tab) {
+      &::after {
+        content: url(/dist/assets/images/bg-pattern-2.svg);
+        position: absolute;
+        top: 41%;
+        left: 91%;
+        display: block;
+      }
+    }
+
+    @include respond(phone) {
+      gap: 6rem;
+    }
+  }
+
+  &__h1 {
+    span {
+      @include text-docoration;
+    }
+  }
+
+  &__hero-image {
+    display: block;
+    position: absolute;
+    max-width: 65.914rem;
+    width: 90%;
+    top: calc(100% + 7rem);
+    z-index: 999;
+
+    @include respond(tab-port) {
+      width: 80%;
+      top: calc(100% + 7.5rem);
+    }
+
+    // @include respond(phone) {
+    //     top: calc(100% + rem);
+    //   }
+  }
+}

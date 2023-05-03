@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as *;
+
+.heading {
+  font-family: fraunces;
+  font-weight: 600;
+
+  &__l {
+    font-size: 8rem;
+    line-height: 8rem;
+
+    @include respond(tab-port) {
+      font-size: 7rem;
+      font-weight: 500;
+    }
+
+    @include respond(phone) {
+      font-size: 5.5rem;
+      font-weight: 400;
+      line-height: 5.4rem;
+    }
+  }
+
+  &__m {
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+  }
+
+  &__s {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}
+
+body {
+  font-family: manrope;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--color-white);
+}
