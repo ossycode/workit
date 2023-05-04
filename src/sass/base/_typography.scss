@@ -2,7 +2,7 @@
 
 .heading {
   font-family: fraunces;
-  font-weight: 600;
+  font-weight: 500;
 
   &__l {
     font-size: 8rem;
@@ -26,8 +26,10 @@
   }
 
   &__s {
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 4rem;
+    font-weight: 400;
+    letter-spacing: -0.2rem;
   }
 }
 
