@@ -1,0 +1,104 @@
+@use "../abstracts/mixins" as *;
+
+.cta {
+  @include respond(tab-land) {
+    padding: 8rem 0px;
+  }
+
+  @include respond(tab-port) {
+    padding: 4rem 0px;
+  }
+
+  @include respond(phone) {
+    margin: 10rem 0;
+  }
+
+  &__box {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 111.2rem;
+    height: 64.774rem;
+    flex-direction: column;
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(phone) {
+      width: 50rem;
+      height: 60.3rem;
+    }
+  }
+  &__founder {
+    width: 47.7rem;
+
+    position: absolute;
+    right: 55%;
+
+    @include respond(tab-port) {
+      width: 28.1rem;
+      left: 6rem;
+      top: 4rem;
+    }
+
+    @include respond(phone) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateY(5.5rem);
+      position: relative;
+    }
+    &--img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__box-content {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    position: absolute;
+    top: 25.4rem;
+    left: 35%;
+    width: 73rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    row-gap: 3rem;
+    padding: 6rem;
+
+    @include respond(tab-port) {
+      width: 62.4rem;
+      padding: 4rem;
+      row-gap: 3rem;
+      top: 19rem;
+      left: 23.8rem;
+    }
+    @include respond(phone) {
+      position: relative;
+      width: 78%;
+      top: 0;
+      left: 0;
+      padding: 4rem 3rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    &::before {
+      @include respond(desk-tab) {
+        content: url(/dist/assets/images/bg-pattern-3.svg);
+        position: absolute;
+        top: 64%;
+        left: 60%;
+        display: block;
+      }
+    }
+  }
+}

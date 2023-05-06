@@ -23,7 +23,7 @@ html {
   }
 
   @include respond(tab-port) {
-    font-size: 50%;
+    font-size: 53%;
   }
 
   @include respond(desktop) {

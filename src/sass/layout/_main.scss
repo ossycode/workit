@@ -83,28 +83,28 @@
       width: 80%;
       top: calc(100% + 7.5rem);
     }
-
-    // @include respond(phone) {
-    //     top: calc(100% + rem);
-    //   }
   }
 }
 
 .section-features {
-  margin-top: -8rem;
+  margin-top: -5rem;
   background-color: var(--color-secondary-2);
   color: var(--color-primary);
-  padding-block: 21.92rem 14.7rem;
+  padding-block: 21.92rem 6.7rem;
   clip-path: ellipse(120% 100% at 50% 0);
   z-index: 0;
 
   @include respond(tab-land) {
-    clip-path: ellipse(150% 100% at 50% 0);
+    clip-path: ellipse(170% 100% at 50% 0);
   }
 
   @include respond(phone) {
-    // padding: 3rem 3rem;
-    // margin-top: -5rem;
     clip-path: ellipse(200% 100% at 50% 0);
   }
+}
+
+.section-cta {
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
