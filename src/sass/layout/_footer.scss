@@ -22,12 +22,12 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
+  }
 
-    & svg {
-      transition: filter 0.2s ease 0s;
-      &:hover {
-        filter: contrast(200%);
-      }
+  &__socials-icon {
+    transition: filter 0.2s ease 0s;
+    &:hover {
+      filter: contrast(200%);
     }
   }
 }
