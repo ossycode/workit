@@ -38,6 +38,12 @@
     position: absolute;
     right: 55%;
 
+    @include respond(tab-land) {
+      width: 44rem;
+      left: 6rem;
+      top: 4rem;
+    }
+
     @include respond(tab-port) {
       width: 28.1rem;
       left: 6rem;
@@ -73,6 +79,14 @@
     text-align: left;
     row-gap: 3rem;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65rem;
+      padding: 4rem;
+      row-gap: 3rem;
+      top: 26.5rem;
+      left: 34rem;
+    }
 
     @include respond(tab-port) {
       width: 62.4rem;
